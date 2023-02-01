@@ -58,12 +58,12 @@ app.post("/", async(req, res, next) => {
     const { yourname, youremail, yoursubject, yourmessage } = req.body;
     try {
         await mainMail(yourname, youremail, yoursubject, yourmessage);
-
-        res.sendFile(__dirname + '/success.html');
+        res.send("Message was successfuly Sent");
+        // res.sendFile(__dirname + '/success.html');
     } catch (error) {
         console.log(error);
-        res.sendFile(__dirname + '/reject.html');
-        //res.send("Message Could not be Sent");
+        // res.sendFile(__dirname + '/reject.html');
+        res.send("Message Could not be Sent");
     }
 });
 
