@@ -183,24 +183,24 @@
 
                 <div class="column-right">
                     <div class="text">Email me Directly</div>
-                    <form action="#">
+                    <form action="http://localhost:5000" method="post" class="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" id="name" placeholder="Name" required>
+                                <input type="text" id="name" name="yourname" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" id="email" placeholder="Email" required>
+                                <input type="email" id="email" name="youremail" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="yoursubject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea name="" id="message" cols="30" rows="10" placeholder="Write message..."
+                            <textarea id="message" name="yourmessage" cols="30" rows="10" placeholder="Write message..."
                                 required></textarea>
                         </div>
                         <div class="button">
-                            <button onclick="sendMail" type="submit">Send message</button>
+                            <button  type="submit" value="Send">Send message</button>
                         </div>
                     </form>
                 </div>
